@@ -1,0 +1,16 @@
+<div>
+  <div *ngFor="let newRecipe of userRecipe">
+    <h1>{{newRecipe.name}}</h1>
+    <ul>
+      <li>{{newRecipe.ingredients}}</li>
+      <li>{{newRecipe.directions}}</li>
+      <li>{{newRecipe.cookTime}} minutes</li>
+    </ul>
+  </div>
+</div>
+<!-- <h2>Our Recipes</h2>
+<ul class="recipes">
+  <li *ngFor="let recipe of recipes">
+    <span class="badge">{{recipe.name}}</span> {{recipe.directions}}
+  </li>
+</ul> -->
