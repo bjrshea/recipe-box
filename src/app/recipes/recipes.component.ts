@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipes } from '../recipes';
-import { RECIPE } from '../mock-recipes'
+import Recipe from '../Recipe';
+import { RECIPES } from '../mock-recipes'
 
 @Component({
   selector: 'app-recipes',
@@ -8,7 +8,9 @@ import { RECIPE } from '../mock-recipes'
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent implements OnInit {
-    userRecipe = RECIPE;
+    userRecipes = RECIPES.map(obj => {
+      return new Recipe(obj.name, obj.ingredients, obj.directions, obj.cookTime);
+    });
 
 
   constructor() { }
